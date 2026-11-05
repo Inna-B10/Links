@@ -1,25 +1,28 @@
 .videoWrapper {
-	@apply bg-zinc-900 p-3 text-white flex items-center justify-between flex-wrap;
-	min-height: 70px;
+	@apply bg-zinc-900 p-6 text-white flex gap-4 flex-col justify-center;
+	min-height: 200px;
 
 	.heading {
-		@apply text-white text-lg inline-block mr-6;
+		@apply text-white text-lg text-center;
+	}
+
+	.recentVideos {
+		@apply grid grid-cols-2 gap-6 items-stretch;
 	}
 }
 
 .videoItem {
-	@apply flex items-center bg-bgColor hover:bg-black transition-colors py-2 px-3 animate-fade duration-300 ease-in-out;
-	width: 40%;
+	@apply bg-bgColor hover:bg-black transition-colors animate-fade duration-300 ease-in-out cursor-pointer h-full flex flex-col justify-between gap-2 pt-4 pb-1.5 rounded-ss-3xl rounded-ee-3xl;
 
-	&:last-child {
-		@apply ml-6;
+	> h3 {
+		@apply text-right pr-3 text-[#a16ca1];
 	}
 
 	> img {
-		@apply mr-3;
+		@apply mx-auto;
 	}
 
-	// > span {
-	// 	@apply text-white truncate;
-	// }
+	> p {
+		@apply text-left pl-3;
+	}
 }
